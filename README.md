@@ -1,6 +1,6 @@
 # Clyde Kebab & Grill — website concepts
 
-Three self-contained website concepts for **Clyde Kebab & Grill** (Clyde, VIC 3978, south-east Melbourne).
+Three self-contained website concepts for **Clyde Kebab & Grill** (Clyde, VIC 3978, south-east Melbourne). The restaurant is **takeaway & delivery only** (no dine-in); all copy and CTAs reflect that.
 Each folder is a complete static site: plain HTML / CSS / JS, no build step, no dependencies.
 
 | Folder | Concept | Feel | Stand-out interactions |
@@ -32,6 +32,7 @@ Each folder has `index.html` at its root, which is all Netlify Drop needs.
 - Reviews are marked as placeholder copy.
 - The "Halal" badge (site 1) and the "4.8 ★" rating (site 2) are placeholders, confirm before going live.
 - Social links point to `#`.
+- Delivery partner buttons (Uber Eats / DoorDash / Menulog) point to `#`, replace with the restaurant's real store links, or remove the ones they don't use.
 
 ## Local preview
 
