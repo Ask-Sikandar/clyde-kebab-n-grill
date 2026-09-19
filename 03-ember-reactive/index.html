@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clyde Kebab & Grill — Fire-Cooked Kebabs | Clyde, Melbourne</title>
+  <meta name="description" content="Clyde Kebab & Grill. Charcoal kebabs, grill plates, HSPs and family feasts cooked over real fire in Clyde, south-east Melbourne. Open 7 days." />
+  <meta property="og:title" content="Clyde Kebab & Grill — Cooked over fire" />
+  <meta property="og:description" content="Charcoal kebabs & grill in Clyde, Melbourne." />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1765036741158-5a1698974257?auto=format&fit=crop&w=1200&q=70" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='1' x2='1' y2='0'%3E%3Cstop offset='0' stop-color='%23FF2E63'/%3E%3Cstop offset='1' stop-color='%23FFB020'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='%230B0A12'/%3E%3Cpath d='M32 10c4 10 14 14 14 26a14 14 0 0 1-28 0c0-6 3-9 6-12 0 5 3 7 5 7 2-6-1-14 3-21z' fill='url(%23g)'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800;900&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <!-- ===== NAV ===== -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#top" class="logo" data-magnetic>
+        <svg class="logo__flame" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 6c4 12 16 16 16 30a16 16 0 0 1-32 0c0-7 3-10 7-14 0 6 3 8 6 8 2-7-1-16 3-24z"/></svg>
+        <span>Clyde Kebab <b>& Grill</b></span>
+      </a>
+      <nav class="nav__links" id="navLinks">
+        <a href="#story" data-magnetic>How we cook</a>
+        <a href="#signature" data-magnetic>Signature</a>
+        <a href="#menu" data-magnetic>Menu</a>
+        <a href="#gallery" data-magnetic>Gallery</a>
+        <a href="#visit" data-magnetic>Visit</a>
+      </nav>
+      <div class="nav__right">
+        <a href="tel:0359900000" class="btn btn--fire" data-magnetic><span>Order now</span></a>
+        <button class="burger" id="burger" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="hero">
+      <canvas id="embers" class="hero__canvas" aria-hidden="true"></canvas>
+      <div class="hero__glow" aria-hidden="true"></div>
+      <div class="hero__inner">
+        <p class="hero__eyebrow split" data-split>Clyde · Melbourne · Open 7 days</p>
+        <h1 class="hero__title">
+          <span class="split" data-split data-delay="100">Cooked</span>
+          <span class="split split--fire" data-split data-delay="250">over fire.</span>
+        </h1>
+        <p class="hero__lead" data-parallax="0.15">
+          Charcoal kebabs, grill plates and Melbourne's proudest HSP.
+          Marinated overnight, grilled on real coals, served fast.
+        </p>
+        <div class="hero__cta">
+          <a href="#menu" class="btn btn--fire btn--lg" data-magnetic><span>Explore the menu</span></a>
+          <a href="#story" class="btn btn--ghost btn--lg" data-magnetic><span>How we cook ↓</span></a>
+        </div>
+      </div>
+
+      <figure class="hero__img" data-parallax="-0.25">
+        <img src="https://images.unsplash.com/photo-1765036741158-5a1698974257?auto=format&fit=crop&w=1400&q=75" alt="Meat grilling over glowing hot coals" loading="eager" />
+      </figure>
+
+      <div class="hero__stats">
+        <div><b data-count="100">0</b><span>% charcoal</span></div>
+        <div><b data-count="30">0</b><span>+ dishes</span></div>
+        <div><b data-count="20">0</b><span>min pick-up</span></div>
+      </div>
+      <div class="hero__hint">Move your mouse · scroll to begin</div>
+    </section>
+
+    <!-- ===== SCROLL BAND ===== -->
+    <div class="band" aria-hidden="true">
+      <div class="band__track" id="band">
+        <span>Lamb Shish</span><span>·</span><span>Chicken Kebab</span><span>·</span><span>Large HSP</span><span>·</span><span>Adana</span><span>·</span><span>Family Feast</span><span>·</span><span>Künefe</span><span>·</span>
+        <span>Lamb Shish</span><span>·</span><span>Chicken Kebab</span><span>·</span><span>Large HSP</span><span>·</span><span>Adana</span><span>·</span><span>Family Feast</span><span>·</span><span>Künefe</span><span>·</span>
+      </div>
+    </div>
+
+    <!-- ===== STORY (pinned scroll) ===== -->
+    <section class="story" id="story">
+      <div class="story__sticky">
+        <div class="story__media">
+          <img class="story__img is-active" data-step="0" src="https://images.unsplash.com/photo-1626323109705-ccefe0818161?auto=format&fit=crop&w=1000&q=75" alt="Marinated meat in a bowl" loading="lazy" />
+          <img class="story__img" data-step="1" src="https://images.unsplash.com/photo-1776766237026-47ced47d3779?auto=format&fit=crop&w=1000&q=75" alt="Skewers over open flame" loading="lazy" />
+          <img class="story__img" data-step="2" src="https://images.unsplash.com/photo-1676471984382-a6dd86b507e9?auto=format&fit=crop&w=1000&q=75" alt="Plated grill with rice" loading="lazy" />
+          <div class="story__counter"><span id="storyNum">01</span><em>/ 03</em></div>
+        </div>
+        <div class="story__text">
+          <p class="kicker">How we cook</p>
+          <div class="story__steps">
+            <div class="story__step is-active" data-step="0">
+              <h2>Marinate <span class="fire">overnight.</span></h2>
+              <p>Lamb and chicken sit in yoghurt, garlic, lemon and our spice mix for at least 12 hours. It's why the meat stays juicy after the coals.</p>
+            </div>
+            <div class="story__step" data-step="1">
+              <h2>Char on <span class="fire">real coals.</span></h2>
+              <p>No gas, no flat-top. The grill is lit at 10am and fed all day. Smoke is the seasoning.</p>
+            </div>
+            <div class="story__step" data-step="2">
+              <h2>Serve in <span class="fire">minutes.</span></h2>
+              <p>Rice, salad, warm bread, house sauces. Onto the plate or into the box and out the door while it's still hissing.</p>
+            </div>
+          </div>
+          <div class="story__dots" aria-hidden="true"><i class="is-active"></i><i></i><i></i></div>
+        </div>
+      </div>
+      <div class="story__spacer" aria-hidden="true"></div>
+    </section>
+
+    <!-- ===== SIGNATURE (tilt cards) ===== -->
+    <section class="signature" id="signature">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="kicker">Signature plates</p>
+          <h2 class="h2">Three plates we'd <span class="fire">bet the shop on.</span></h2>
+          <p class="sec-head__sub">Hover to tilt. Tap on mobile.</p>
+        </div>
+        <div class="tilt-grid">
+          <article class="tilt" data-tilt>
+            <div class="tilt__inner">
+              <img src="https://images.unsplash.com/photo-1626323109697-df55d20f06a8?auto=format&fit=crop&w=700&q=75" alt="Lamb cutlets on a black plate" loading="lazy" />
+              <div class="tilt__shine" aria-hidden="true"></div>
+              <div class="tilt__body">
+                <span class="tilt__num">01</span>
+                <h3>Lamb Cutlets</h3>
+                <p>Four cutlets, salted hard, flame-kissed. Grilled tomato, sumac onion, saffron rice.</p>
+                <span class="tilt__price">$34</span>
+              </div>
+            </div>
+          </article>
+          <article class="tilt" data-tilt>
+            <div class="tilt__inner">
+              <img src="https://images.unsplash.com/photo-1777199298385-07e46ccc2004?auto=format&fit=crop&w=700&q=75" alt="Chips, meat and sauces" loading="lazy" />
+              <div class="tilt__shine" aria-hidden="true"></div>
+              <div class="tilt__body">
+                <span class="tilt__num">02</span>
+                <h3>The Large HSP</h3>
+                <p>Chips, mixed meat, melted cheese, garlic, chilli & BBQ. A Melbourne institution, done right.</p>
+                <span class="tilt__price">$19</span>
+              </div>
+            </div>
+          </article>
+          <article class="tilt" data-tilt>
+            <div class="tilt__inner">
+              <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=700&q=75" alt="Mixed grill with vegetables" loading="lazy" />
+              <div class="tilt__shine" aria-hidden="true"></div>
+              <div class="tilt__body">
+                <span class="tilt__num">03</span>
+                <h3>Mixed Grill</h3>
+                <p>Lamb shish, chicken shish, adana and a cutlet. For when you can't decide, so you don't.</p>
+                <span class="tilt__price">$36</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== MENU ===== -->
+    <section class="menu" id="menu">
+      <div class="wrap">
+        <div class="sec-head sec-head--row">
+          <div>
+            <p class="kicker">Full menu</p>
+            <h2 class="h2">Tap a dish to <span class="fire">add it to your tray.</span></h2>
+          </div>
+          <p class="sec-head__sub">Build a tray, then call it through. Prices include GST.</p>
+        </div>
+        <div class="menu__tabs" id="menuTabs" role="tablist"></div>
+        <div class="menu__grid" id="menuGrid"></div>
+      </div>
+    </section>
+
+    <!-- ===== GALLERY (horizontal scroll) ===== -->
+    <section class="gallery" id="gallery">
+      <div class="gallery__sticky">
+        <div class="gallery__head wrap">
+          <p class="kicker">Gallery</p>
+          <h2 class="h2">Keep <span class="fire">scrolling.</span></h2>
+        </div>
+        <div class="gallery__track" id="galleryTrack">
+          <figure><img src="https://images.unsplash.com/photo-1779474989201-fe2d22ff3f79?auto=format&fit=crop&w=800&q=70" alt="Skewers on the grill" loading="lazy" /><figcaption>The grill, 6pm</figcaption></figure>
+          <figure><img src="https://images.unsplash.com/photo-1756362847925-71c792d6729c?auto=format&fit=crop&w=800&q=70" alt="Doner spit" loading="lazy" /><figcaption>The spit</figcaption></figure>
+          <figure><img src="https://images.unsplash.com/photo-1699728088614-7d1d4277414b?auto=format&fit=crop&w=800&q=70" alt="Kebab wrap in hand" loading="lazy" /><figcaption>Lamb kebab</figcaption></figure>
+          <figure><img src="https://images.unsplash.com/photo-1749549028968-eb3df3181c34?auto=format&fit=crop&w=800&q=70" alt="Baklava" loading="lazy" /><figcaption>Baklava</figcaption></figure>
+          <figure><img src="https://images.unsplash.com/photo-1537909185939-b78ca1c8aac9?auto=format&fit=crop&w=800&q=70" alt="Mezze tray" loading="lazy" /><figcaption>Dips & sides</figcaption></figure>
+          <figure><img src="https://images.unsplash.com/photo-1709548145082-04d0cde481d4?auto=format&fit=crop&w=800&q=70" alt="Dimly lit restaurant" loading="lazy" /><figcaption>The room</figcaption></figure>
+        </div>
+      </div>
+      <div class="gallery__spacer" aria-hidden="true"></div>
+    </section>
+
+    <!-- ===== REVIEWS ===== -->
+    <section class="reviews">
+      <div class="wrap reviews__grid">
+        <blockquote class="quote" data-reveal>
+          <p>"You can taste the fire. Nothing in the south-east comes close."</p>
+          <cite>Placeholder review · Google</cite>
+        </blockquote>
+        <blockquote class="quote" data-reveal>
+          <p>"Family feast fed six of us. The cutlets disappeared in about ninety seconds."</p>
+          <cite>Placeholder review · Facebook</cite>
+        </blockquote>
+        <blockquote class="quote" data-reveal>
+          <p>"That garlic sauce. I'd put it on cereal."</p>
+          <cite>Placeholder review · Google</cite>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- ===== VISIT ===== -->
+    <section class="visit" id="visit">
+      <div class="wrap visit__grid">
+        <div class="visit__copy" data-reveal>
+          <p class="kicker">Visit</p>
+          <h2 class="h2">Clyde, <span class="fire">VIC 3978.</span></h2>
+          <address>Shop 4, 1 Berwick-Cranbourne Rd<br>Clyde VIC 3978</address>
+          <a href="tel:0359900000" class="visit__phone" data-magnetic>(03) 5990 0000</a>
+          <ul class="hours">
+            <li><span>Mon – Thu</span><span>11am – 10pm</span></li>
+            <li><span>Fri – Sat</span><span>11am – 11pm</span></li>
+            <li><span>Sunday</span><span>11am – 9:30pm</span></li>
+          </ul>
+          <div class="visit__cta">
+            <a class="btn btn--fire" href="https://www.google.com/maps/search/?api=1&query=Clyde+VIC+3978" target="_blank" rel="noopener" data-magnetic><span>Directions</span></a>
+            <a class="btn btn--ghost" href="tel:0359900000" data-magnetic><span>Call to order</span></a>
+          </div>
+        </div>
+        <div class="visit__map" data-reveal>
+          <iframe title="Map of Clyde Kebab & Grill" src="https://www.google.com/maps?q=Clyde+VIC+3978&z=14&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <span>© <span id="year"></span> Clyde Kebab & Grill · Clyde, Melbourne</span>
+      <span class="footer__links"><a href="#" data-magnetic>Instagram</a><a href="#" data-magnetic>Facebook</a><a href="#" data-magnetic>Google</a></span>
+    </div>
+  </footer>
+
+  <!-- ===== ORDER TRAY ===== -->
+  <div class="tray" id="tray" aria-live="polite">
+    <button class="tray__toggle" id="trayToggle" aria-expanded="false" aria-controls="trayPanel">
+      <span class="tray__icon">🍽️</span>
+      <span class="tray__count" id="trayCount">0</span>
+      <span class="tray__total" id="trayTotal">$0</span>
+    </button>
+    <div class="tray__panel" id="trayPanel" hidden>
+      <div class="tray__head"><b>Your tray</b><button type="button" id="trayClear">Clear</button></div>
+      <ul class="tray__list" id="trayList"></ul>
+      <p class="tray__empty" id="trayEmpty">Tap dishes on the menu to add them.</p>
+      <a href="tel:0359900000" class="btn btn--fire btn--block"><span>Call & order this tray</span></a>
+      <p class="tray__note">Ordering online isn't live yet, call us and read it out.</p>
+    </div>
+  </div>
+
+  <script src="menu-data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
