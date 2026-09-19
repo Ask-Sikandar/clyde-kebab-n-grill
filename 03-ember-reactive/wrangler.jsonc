@@ -1,0 +1,7 @@
+{
+  "$schema": "https://unpkg.com/wrangler/config-schema.json",
+  "name": "res03-clyde-kebab",
+  "compatibility_date": "2026-09-18",
+  "assets": { "directory": "./" },
+  "routes": [{ "pattern": "res03.corvale.com.au", "custom_domain": true }]
+}

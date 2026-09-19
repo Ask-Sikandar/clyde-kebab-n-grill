@@ -19,6 +19,22 @@ All three are fully responsive, respect `prefers-reduced-motion`, and share the 
 
 Each folder has `index.html` at its root, which is all Netlify Drop needs.
 
+## Deploy to Cloudflare (Workers static assets)
+
+Each folder also has a `wrangler.jsonc` (Worker name + custom domain). With `wrangler` logged in:
+
+```bash
+cd 03-ember-reactive && npx wrangler deploy
+```
+
+| Folder | Worker | Live URL |
+|---|---|---|
+| `01-street-bold/` | `res01-clyde-kebab` | https://res01.corvale.com.au |
+| `02-fresh-modern/` | `res02-clyde-kebab` | https://res02.corvale.com.au |
+| `03-ember-reactive/` | `res03-clyde-kebab` | https://res03.corvale.com.au |
+
+`.assetsignore` keeps `wrangler.jsonc` and Netlify state out of the published files.
+
 ## Editing content
 
 - **Menu:** every site reads from `menu-data.js` in its folder. Change names, prices, descriptions and tags there; the page re-renders automatically. Tags: `v` vegetarian, `gf` gluten free, `hot` spicy, `fav` popular.
