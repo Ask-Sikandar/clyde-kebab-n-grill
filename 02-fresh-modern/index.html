@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Clyde Kebab & Grill — Fresh Charcoal Kebabs in Clyde, Melbourne</title>
-  <meta name="description" content="Fresh, charcoal-grilled kebabs, grill plates, HSPs and family feasts in Clyde, Melbourne. Takeaway &amp; delivery only, open 7 days." />
+  <title>Clyde Kebab & Grill — Kebabs, HSPs & Grilled Chicken in Clyde, Melbourne</title>
+  <meta name="description" content="100% halal kebabs from $12, HSPs, shish plates, gozleme, bolani and grilled chicken in Clyde, Melbourne. Meal deals from $17. Takeaway &amp; delivery only." />
   <meta name="designer" content="Corvale" />
   <meta name="copyright" content="Designed and developed by Corvale. Unauthorized copying or reproduction is prohibited." />
   <meta property="og:title" content="Clyde Kebab & Grill" />
-  <meta property="og:description" content="Fresh charcoal kebabs in Clyde, Melbourne. Open 7 days." />
-  <meta property="og:image" content="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=1200&q=70" />
+  <meta property="og:description" content="100% halal kebabs, HSPs, shish plates and grilled chicken in Clyde, Melbourne. Takeaway &amp; delivery." />
+  <meta property="og:image" content="https://res02.corvale.com.au/images/og-storefront.jpg" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%231F3A2E'/%3E%3Ccircle cx='32' cy='32' r='14' fill='%23C8553D'/%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,6 +20,8 @@
 
   <!-- ===== HEADER ===== -->
   <header class="header" id="header">
+    <!-- TEMP: remove once the shop opens (see .soon-banner in styles.css) -->
+    <div class="soon-banner" role="status"><span class="pulse" aria-hidden="true"></span><b>Opening soon</b><span>· We're not taking orders just yet, see you shortly in Clyde!</span></div>
     <div class="wrap header__inner">
       <a href="#top" class="logo" aria-label="Clyde Kebab & Grill">
         <img src="logo.png" alt="Clyde Kebab & Grill" style="height: 45px; width: auto;" />
@@ -27,13 +29,13 @@
       </a>
       <nav class="nav" id="nav">
         <a href="#menu">Menu</a>
-        <a href="#builder">Build a box</a>
+        <a href="#builder">Build a deal</a>
         <a href="#why">Why us</a>
         <a href="#reviews">Reviews</a>
         <a href="#visit">Order</a>
       </nav>
       <div class="header__actions">
-        <a href="tel:0359900000" class="btn btn--ghost">(03) 5990 0000</a>
+        <a href="tel:0359170677" class="btn btn--ghost">(03) 5917 0677</a>
         <a href="#menu" class="btn btn--primary">Order pick-up</a>
         <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span></button>
       </div>
@@ -46,42 +48,56 @@
     <section class="hero">
       <div class="wrap hero__grid">
         <div class="hero__copy">
-          <span class="pill pill--green"><span class="pulse"></span> Takeaway &amp; delivery · Clyde VIC</span>
-          <h1>Fresh from the charcoal, <span class="accent">straight to your door.</span></h1>
+          <div class="hero__badges">
+            <span class="halal-badge"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>100% Halal</span>
+            <span class="pill pill--green"><span class="pulse"></span> Takeaway &amp; delivery · Clyde VIC</span>
+          </div>
+          <h1>Fresh off the grill, <span class="accent">straight to your door.</span></h1>
           <p class="lead">
-            Family-run kebab & grill in Clyde. Marinated overnight, grilled over real coals,
-            wrapped in warm Turkish bread. Takeaway &amp; delivery only: pick up in 20 minutes or get it delivered.
+            Kebabs, HSPs, shish plates, gozleme and grilled chicken in Clyde.
+            Takeaway &amp; delivery only: call ahead for pick-up or get it delivered.
           </p>
           <div class="hero__cta">
             <a href="#menu" class="btn btn--primary btn--lg">Browse the menu</a>
-            <a href="#builder" class="btn btn--soft btn--lg">Build your own box →</a>
+            <a href="#builder" class="btn btn--soft btn--lg">Build a kebab deal →</a>
           </div>
           <div class="hero__meta">
-            <div><b>4.8</b><span>★ Google rating*</span></div>
-            <div><b>20 min</b><span>average pick-up</span></div>
-            <div><b>7 days</b><span>delivery till late</span></div>
+            <div><b>$12</b><span>kebabs, any filling</span></div>
+            <div><b>$17</b><span>meal deals from</span></div>
+            <div><b>45</b><span>items on the menu</span></div>
           </div>
         </div>
 
         <div class="hero__collage">
           <div class="collage__item collage__item--big">
-            <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=900&q=75" alt="Charcoal grilled meat and vegetables" loading="eager" />
+            <img src="images/storefront.webp" alt="Clyde Kebab &amp; Grill shopfront with kebab, HSP, shish plate and grilled chicken window graphics" loading="eager" />
           </div>
           <div class="collage__item collage__item--tall">
-            <img src="https://images.unsplash.com/photo-1699728088614-7d1d4277414b?auto=format&fit=crop&w=600&q=75" alt="Hand holding a kebab wrap" loading="lazy" />
+            <img src="images/hero-chicken.webp" alt="Grilled chicken with roast potato, pumpkin, peas and gravy" loading="eager" />
           </div>
           <div class="collage__item collage__item--card">
             <span class="collage__emoji">🥙</span>
-            <b>Lamb Kebab</b>
-            <span class="collage__price">$16</span>
+            <b>Kebab</b>
+            <span class="collage__price">$12</span>
           </div>
           <div class="collage__item collage__item--wide">
-            <img src="https://images.unsplash.com/photo-1537909185939-b78ca1c8aac9?auto=format&fit=crop&w=800&q=75" alt="Tray of dips and mezze" loading="lazy" />
+            <img src="images/hero-gozleme.webp" alt="Bolani and gozleme on a plate" loading="lazy" />
           </div>
-          <div class="collage__item collage__item--card collage__item--terra">
-            <b>Family Feast</b>
-            <span>feeds 4 · $99</span>
-          </div>
+          <a href="#cat-chicken" class="collage__item collage__item--card collage__item--terra">
+            <b>Family Deal</b>
+            <span>whole chicken &amp; sides · $52</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== HALAL ===== -->
+    <section class="halal" aria-label="All our food is halal">
+      <div class="wrap halal__inner">
+        <span class="halal__stamp" aria-hidden="true"><span lang="ar">حلال</span><small>100%</small></span>
+        <div>
+          <h2 class="halal__title">Every item on our menu is <span>100% Halal.</span></h2>
+          <p>No exceptions. From kebabs and shish to grilled chicken, it's all halal, every day.</p>
         </div>
       </div>
     </section>
@@ -101,7 +117,7 @@
           </div>
           <label class="search">
             <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
-            <input type="search" id="menuSearch" placeholder="Search the menu… e.g. lamb, HSP, vegetarian" autocomplete="off" />
+            <input type="search" id="menuSearch" placeholder="Search the menu… e.g. lamb, HSP, deal, 32" autocomplete="off" />
           </label>
         </div>
 
@@ -109,8 +125,28 @@
           <aside class="menu__rail" id="menuRail" aria-label="Menu sections"></aside>
           <div class="menu__body" id="menuBody"></div>
         </div>
-        <p class="menu__empty" id="menuEmpty" hidden>Nothing matched that search, try "chicken" or "veg".</p>
-        <p class="menu__note">V = vegetarian · GF = gluten free · 🌶 = spicy · Prices include GST · Let us know about allergies.</p>
+        <p class="menu__empty" id="menuEmpty" hidden>Nothing matched that search, try "chicken" or "chips".</p>
+        <p class="menu__note"><strong class="menu__halal">All our food is 100% halal.</strong> Numbers match our in-store menu boards · V = vegetarian · Prices include GST · Let us know about allergies. <a href="#boards">See the menu boards →</a></p>
+      </div>
+    </section>
+
+    <!-- ===== MENU BOARDS ===== -->
+    <section class="boards" id="boards">
+      <div class="wrap">
+        <div class="boards__head">
+          <div>
+            <p class="kicker">In store</p>
+            <h2>The menu boards, <span class="accent">as they hang in the shop.</span></h2>
+          </div>
+          <p>Tap a board to see it full size.</p>
+        </div>
+        <div class="boards__grid">
+          <button type="button" class="board" data-full="images/boards/board-1.webp"><img src="images/boards/board-1-sm.webp" alt="Menu board: kebabs $12, samosa $3, and meal deals 1 to 4 from $17" width="640" height="359" loading="lazy" /></button>
+          <button type="button" class="board" data-full="images/boards/board-2.webp"><img src="images/boards/board-2-sm.webp" alt="Menu board: kebab rolls, HSP, chips, chicken with rice mix and escalope potato" width="640" height="361" loading="lazy" /></button>
+          <button type="button" class="board" data-full="images/boards/board-3.webp"><img src="images/boards/board-3-sm.webp" alt="Menu board: shish plates 1 to 4" width="640" height="360" loading="lazy" /></button>
+          <button type="button" class="board" data-full="images/boards/board-4.webp"><img src="images/boards/board-4-sm.webp" alt="Menu board: falafel plate, chicken bread, gozleme, schnitzel, bolani and hot dishes" width="640" height="357" loading="lazy" /></button>
+          <button type="button" class="board" data-full="images/boards/board-5.webp"><img src="images/boards/board-5-sm.webp" alt="Menu board: grilled chicken, family deals and salads" width="640" height="359" loading="lazy" /></button>
+        </div>
       </div>
     </section>
 
@@ -118,48 +154,43 @@
     <section class="builder" id="builder">
       <div class="wrap builder__grid">
         <div class="builder__copy">
-          <p class="kicker kicker--light">Build a box</p>
-          <h2>Your box, <span class="accent-light">your rules.</span></h2>
-          <p>Pick a base, a protein, and sauces. Watch the price update, then call it through and it's ready in 20 minutes.</p>
+          <p class="kicker kicker--light">Build a deal</p>
+          <h2>Your deal, <span class="accent-light">your rules.</span></h2>
+          <p>Pick how many kebabs, choose a filling for each and add a side or two. Every deal includes one chips plus a drink for each kebab. Watch the price update, then call it through.</p>
           <div class="builder__preview" id="builderPreview">
-            <div class="preview__emoji" id="previewEmoji">🍱</div>
+            <div class="preview__emoji" aria-hidden="true">🌯</div>
             <div>
-              <b id="previewTitle">Rice box · Chicken shish</b>
-              <span id="previewSub">Garlic sauce</span>
+              <b id="previewTitle">Deal 1 · 1 kebab</b>
+              <span id="previewSub">Chicken · 1 chips · 1 drink</span>
             </div>
-            <div class="preview__price"><small>Total</small><span id="previewPrice">$18</span></div>
+            <div class="preview__price"><small>Total</small><span id="previewPrice">$17</span></div>
           </div>
-          <a href="tel:0359900000" class="btn btn--terra btn--lg">Call & order this</a>
+          <a href="tel:0359170677" class="btn btn--terra btn--lg">Call & order this</a>
         </div>
 
         <form class="builder__form" id="builderForm">
           <fieldset>
-            <legend>1. Base</legend>
-            <div class="choices" data-group="base">
-              <label><input type="radio" name="base" value="rice" data-price="0" data-label="Rice box" checked><span>Saffron rice<em>included</em></span></label>
-              <label><input type="radio" name="base" value="chips" data-price="0" data-label="Chips box"><span>Chips<em>included</em></span></label>
-              <label><input type="radio" name="base" value="salad" data-price="0" data-label="Salad box"><span>Garden salad<em>included</em></span></label>
-              <label><input type="radio" name="base" value="wrap" data-price="-3" data-label="Wrap"><span>Turkish wrap<em>−$3</em></span></label>
+            <legend>1. How many kebabs?</legend>
+            <div class="choices">
+              <label><input type="radio" name="deal" value="1" data-price="17" checked><span>1 kebab<em>Deal 1 · $17</em></span></label>
+              <label><input type="radio" name="deal" value="2" data-price="30"><span>2 kebabs<em>Deal 2 · $30</em></span></label>
+              <label><input type="radio" name="deal" value="3" data-price="42"><span>3 kebabs<em>Deal 3 · $42</em></span></label>
+              <label><input type="radio" name="deal" value="4" data-price="58"><span>4 kebabs<em>Deal 4 · $58</em></span></label>
             </div>
           </fieldset>
           <fieldset>
-            <legend>2. Protein</legend>
-            <div class="choices" data-group="protein">
-              <label><input type="radio" name="protein" value="chicken" data-price="18" data-label="Chicken shish" checked><span>Chicken shish<em>$18</em></span></label>
-              <label><input type="radio" name="protein" value="lamb" data-price="20" data-label="Lamb shish"><span>Lamb shish<em>$20</em></span></label>
-              <label><input type="radio" name="protein" value="mixed" data-price="21" data-label="Mixed meat"><span>Mixed<em>$21</em></span></label>
-              <label><input type="radio" name="protein" value="falafel" data-price="16" data-label="Falafel"><span>Falafel (V)<em>$16</em></span></label>
-            </div>
+            <legend>2. Fillings</legend>
+            <div id="fillings"></div>
           </fieldset>
           <fieldset>
-            <legend>3. Sauces & extras</legend>
-            <div class="choices choices--multi" data-group="extras">
-              <label><input type="checkbox" name="extra" value="garlic" data-price="0" data-label="Garlic sauce" checked><span>Garlic<em>free</em></span></label>
-              <label><input type="checkbox" name="extra" value="chilli" data-price="0" data-label="Chilli sauce"><span>Chilli<em>free</em></span></label>
-              <label><input type="checkbox" name="extra" value="bbq" data-price="0" data-label="BBQ sauce"><span>BBQ<em>free</em></span></label>
-              <label><input type="checkbox" name="extra" value="cheese" data-price="2" data-label="Cheese"><span>Cheese<em>+$2</em></span></label>
-              <label><input type="checkbox" name="extra" value="halloumi" data-price="4" data-label="Halloumi"><span>Halloumi<em>+$4</em></span></label>
-              <label><input type="checkbox" name="extra" value="drink" data-price="3" data-label="Can of drink"><span>Drink<em>+$3</em></span></label>
+            <legend>3. Add a side</legend>
+            <div class="choices choices--multi">
+              <label><input type="checkbox" name="extra" value="samosa" data-price="3" data-label="Samosa"><span>Samosa<em>+$3</em></span></label>
+              <label><input type="checkbox" name="extra" value="dimsim" data-price="2.8" data-label="Dim sim"><span>Dim sim<em>+$2.80</em></span></label>
+              <label><input type="checkbox" name="extra" value="potatocake" data-price="1.5" data-label="Potato cake"><span>Potato cake<em>+$1.50</em></span></label>
+              <label><input type="checkbox" name="extra" value="strip" data-price="2.5" data-label="Chicken strip"><span>Chicken strip<em>+$2.50</em></span></label>
+              <label><input type="checkbox" name="extra" value="fritter" data-price="2.5" data-label="Pineapple fritter"><span>Pineapple fritter<em>+$2.50</em></span></label>
+              <label><input type="checkbox" name="extra" value="pumpkin" data-price="2.5" data-label="Roasted pumpkin"><span>Roasted pumpkin<em>+$2.50</em></span></label>
             </div>
           </fieldset>
         </form>
@@ -173,31 +204,31 @@
         <h2>Simple food, <span class="accent">done properly.</span></h2>
         <div class="bento">
           <article class="bento__cell bento__cell--img">
-            <img src="https://images.unsplash.com/photo-1776766237026-47ced47d3779?auto=format&fit=crop&w=900&q=75" alt="Skewers cooking over an open flame" loading="lazy" />
-            <div class="bento__overlay"><b>Real charcoal</b><span>Lit fresh every morning</span></div>
+            <img src="images/shish-plate.webp" alt="Shish plate with skewers, salad, chips, bread and sauces" loading="lazy" />
+            <div class="bento__overlay"><b>Shish plates</b><span>From $28, with salad or rice, bread &amp; sauce</span></div>
           </article>
           <article class="bento__cell">
             <span class="bento__icon">🌿</span>
-            <h3>Fresh, every day</h3>
-            <p>Salads chopped each morning. Bread baked daily. Nothing sits around.</p>
+            <h3>Seven fresh salads</h3>
+            <p>Greek, tabouli, potato, coleslaw and more. Small, medium or large from $7.</p>
           </article>
           <article class="bento__cell bento__cell--green">
-            <span class="bento__num" data-count="30">0</span>
-            <p>menu items, and every one of them cooked to order.</p>
+            <span class="bento__num" data-count="45">0</span>
+            <p>items on the menu, from kebabs and HSPs to gozleme and grilled chicken.</p>
           </article>
           <article class="bento__cell">
-            <span class="bento__icon">🧄</span>
-            <h3>House-made sauces</h3>
-            <p>Our garlic sauce has a following. The chilli sauce has a warning.</p>
+            <span class="bento__icon">🍗</span>
+            <h3>Grilled chicken</h3>
+            <p>Whole, half or quarter, on its own or with rice. Made with perfection.</p>
           </article>
           <article class="bento__cell bento__cell--terra">
             <h3>Feeding a crowd?</h3>
-            <p>Feasts for 2, 4, or a party of 10. Order ahead and we'll have it packed and ready, or delivered.</p>
-            <a href="#menu" class="link-arrow">See family feasts →</a>
+            <p>A whole chicken with chips, salad, rice, gravy and 2 cans for $52, or 4 kebabs, chips and 4 drinks for $58.</p>
+            <a href="#cat-chicken" class="link-arrow">See family deals →</a>
           </article>
           <article class="bento__cell bento__cell--img bento__cell--img2">
-            <img src="https://images.unsplash.com/photo-1778448563279-e7b39093933c?auto=format&fit=crop&w=700&q=75" alt="Pistachio baklava" loading="lazy" />
-            <div class="bento__overlay"><b>Sweet finish</b><span>Baklava & künefe</span></div>
+            <img src="images/chicken-rice.webp" alt="Half grilled chicken on rice with lemon" loading="lazy" />
+            <div class="bento__overlay"><b>Half chicken &amp; rice</b><span>$18</span></div>
           </article>
         </div>
       </div>
@@ -224,7 +255,7 @@
           </article>
           <article class="review">
             <div class="stars">★★★★★</div>
-            <p>"Ordered the family feast for a birthday. Packed beautifully, still hot, and the kids fought over the halloumi."</p>
+            <p>"Got the grill chicken family deal for a birthday. Packed beautifully, still hot, and the kids fought over the chips."</p>
             <footer><b>Placeholder review</b><span>Google · 1 month ago</span></footer>
           </article>
           <article class="review">
@@ -234,7 +265,7 @@
           </article>
           <article class="review">
             <div class="stars">★★★★★</div>
-            <p>"Great vegetarian options too, the falafel wrap is proper. Not an afterthought."</p>
+            <p>"Great vegetarian options too, the falafel kebab is proper. Not an afterthought."</p>
             <footer><b>Placeholder review</b><span>Google · 5 days ago</span></footer>
           </article>
         </div>
@@ -249,14 +280,14 @@
           <h2>Collect it, <span class="accent">or get it delivered.</span></h2>
           <p class="visit__note">We're takeaway &amp; delivery only, no dine-in. Pick-up orders are ready in about 20 minutes.</p>
           <address>Shop 4, 1 Berwick-Cranbourne Rd<br>Clyde VIC 3978</address>
-          <a class="visit__phone" href="tel:0359900000">(03) 5990 0000</a>
+          <a class="visit__phone" href="tel:0359170677">(03) 5917 0677</a>
           <ul class="hours">
             <li><span>Mon – Thu</span><span>11:00am – 10:00pm</span></li>
             <li><span>Fri – Sat</span><span>11:00am – 11:00pm</span></li>
             <li><span>Sunday</span><span>11:00am – 9:30pm</span></li>
           </ul>
           <div class="visit__actions">
-            <a class="btn btn--primary" href="tel:0359900000">Call for pick-up</a>
+            <a class="btn btn--primary" href="tel:0359170677">Call for pick-up</a>
             <a class="btn btn--soft" href="https://www.google.com/maps/search/?api=1&query=Clyde+VIC+3978" target="_blank" rel="noopener">Directions</a>
           </div>
           <div class="delivery">
@@ -266,8 +297,14 @@
             <a href="#" class="delivery__btn">Menulog</a>
           </div>
         </div>
-        <div class="visit__map">
-          <iframe title="Map to Clyde Kebab & Grill" src="https://www.google.com/maps?q=Clyde+VIC+3978&z=14&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="visit__side">
+          <figure class="visit__shop">
+            <img src="images/storefront-2.webp" alt="Clyde Kebab &amp; Grill entrance with the menu board and 'From wraps to grill, all in one place' window graphics" width="1600" height="893" loading="lazy" />
+            <figcaption>From wraps to grill, all in one place. Look for the yellow windows.</figcaption>
+          </figure>
+          <div class="visit__map">
+            <iframe title="Map to Clyde Kebab & Grill" src="https://www.google.com/maps?q=Clyde+VIC+3978&z=14&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
         </div>
       </div>
     </section>
@@ -277,26 +314,31 @@
     <div class="wrap footer__grid">
       <div>
         <a href="#top" class="logo"><img src="logo.png" alt="Clyde Kebab & Grill" style="height: 40px; width: auto;" /><span>Clyde Kebab <small>& Grill</small></span></a>
-        <p>Fresh charcoal kebabs in Clyde, south-east Melbourne. Takeaway &amp; delivery only.</p>
+        <p><strong>100% Halal.</strong> Kebabs, HSPs, shish plates and grilled chicken in Clyde, south-east Melbourne. Takeaway &amp; delivery only.</p>
       </div>
       <div>
         <b>Explore</b>
-        <a href="#menu">Menu</a><a href="#builder">Build a box</a><a href="#reviews">Reviews</a><a href="#visit">Pick-up &amp; delivery</a>
+        <a href="#menu">Menu</a><a href="#boards">Menu boards</a><a href="#builder">Build a deal</a><a href="#reviews">Reviews</a><a href="#visit">Pick-up &amp; delivery</a>
       </div>
       <div>
         <b>Follow</b>
         <a href="#">Instagram</a><a href="#">Facebook</a><a href="#">Google</a>
       </div>
     </div>
-    <div class="wrap footer__fine">© <span id="year"></span> Clyde Kebab & Grill · Designed by <a href="https://corvale.com.au" target="_blank" rel="noopener" style="opacity: 0.7;">Corvale</a> · *Rating shown is placeholder
+    <div class="wrap footer__fine">© <span id="year"></span> Clyde Kebab & Grill · Designed by <a href="https://corvale.com.au" target="_blank" rel="noopener" style="opacity: 0.7;">Corvale</a>
       <!-- Website design and development by Corvale. Unauthorized reproduction prohibited. -->
       <div data-designer="corvale-2026" style="display:none;">Protected content - Designed by Corvale</div>
     </div>
   </footer>
 
+  <dialog class="lightbox" id="lightbox" aria-label="Menu board">
+    <button type="button" class="lightbox__close" aria-label="Close">×</button>
+    <img id="lightboxImg" alt="" />
+  </dialog>
+
   <div class="mobile-bar">
     <a href="#menu">Menu</a>
-    <a href="tel:0359900000" class="mobile-bar__cta">Order pick-up</a>
+    <a href="tel:0359170677" class="mobile-bar__cta">Order pick-up</a>
   </div>
 
   <!-- Protected Design Asset: Designed by Corvale -->
