@@ -1,4 +1,4 @@
-/* Clyde Kebab & Grill — Fresh Modern: menu render, search, scrollspy, deal builder, board lightbox, carousel */
+/* Clyde Kebab & Grill — Fresh Modern: menu render, search, scrollspy, deal builder, board lightbox */
 (function () {
   "use strict";
   const $ = (s, r = document) => r.querySelector(s);
@@ -137,14 +137,8 @@
   }));
   lightbox.addEventListener("click", e => { if (e.target !== lightboxImg) lightbox.close(); });
 
-  /* ---------- reviews carousel ---------- */
-  const car = $("#carousel");
-  const step = () => (car.querySelector(".review")?.getBoundingClientRect().width || 300) + 16;
-  $("#revNext").addEventListener("click", () => car.scrollBy({ left: step(), behavior: "smooth" }));
-  $("#revPrev").addEventListener("click", () => car.scrollBy({ left: -step(), behavior: "smooth" }));
-
   /* ---------- reveal + counters ---------- */
-  $$(".bento__cell, .review, .dish, .board, .visit__card, .visit__side").forEach(el => el.setAttribute("data-reveal", ""));
+  $$(".bento__cell, .dish, .board, .visit__card, .visit__side").forEach(el => el.setAttribute("data-reveal", ""));
   const rev = new IntersectionObserver(entries => entries.forEach((e, i) => {
     if (e.isIntersecting) { e.target.style.transitionDelay = `${(i % 6) * 60}ms`; e.target.classList.add("in"); rev.unobserve(e.target); }
   }), { threshold: .12 });
