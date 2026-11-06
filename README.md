@@ -11,7 +11,7 @@ Each folder is a complete static site: plain HTML / CSS / JS, no build step, no 
 
 All three are fully responsive and respect `prefers-reduced-motion`.
 
-**`01-street-bold-final/` is the version the client chose.** It's a copy of `01-street-bold/` with the real content from site 02: the real menu (items 1–45 plus meal deals) with dish photos, the in-store menu boards (tap to enlarge), real deals, photos cut from the client's window artwork, the real phone number and address, the "100% Halal" messaging, a temporary "Opening soon" banner, and two-column layouts on phones. Like `02-fresh-modern/`, the folder holds only website files so it can be uploaded over SFTP as is. `01-street-bold/` stays as the original concept.
+**`01-street-bold-final/` is the version the client chose.** It's a copy of `01-street-bold/` with the real content from site 02: the real menu (items 1–49 plus meal deals, from the November 2026 menu) with dish photos, the in-store menu boards (tap to enlarge), real deals, photos cut from the client's window artwork, the real phone number and address, the "100% Halal" messaging, a temporary "Opening soon" banner, and two-column layouts on phones. Like `02-fresh-modern/`, the folder holds only website files so it can be uploaded over SFTP as is. `01-street-bold/` stays as the original concept.
 
 ## Deploy to Netlify (drag & drop)
 
@@ -48,7 +48,7 @@ In 01 and 03, `.assetsignore` keeps `wrangler.jsonc` and Netlify state out of th
 ## Placeholder content to confirm with the client
 
 - `01-street-bold-final` and site 02 have the real address (Shop 9, 280 Berwick-Cranbourne Road, Clyde VIC 3978) and phone number ((03) 5917 0677); their opening hours are still placeholders. Sites 01 and 03 use placeholder address, phone and hours.
-- Menu items and prices are a realistic starting point, not the real menu, **except in `01-street-bold-final/` and `02-fresh-modern/`**, which use the real menu (items 1–45 plus meal deals) transcribed from the client's menu boards in `docs and materials/menu-page-*.jpg`. Its photos in `images/` are cut from those boards and the window artwork; the boards themselves are in `images/boards/`.
+- Menu items and prices are a realistic starting point, not the real menu, **except in `01-street-bold-final/` and `02-fresh-modern/`**, which use the real menu transcribed from the client's menu boards. `01-street-bold-final/` has the November 2026 menu (items 1–49 plus meal deals) from `docs and materials/Clyde Menu Nov 2026.pdf`; `02-fresh-modern/` still has the older menu (items 1–45) from `docs and materials/menu-page-*.jpg`. Its photos in `images/` are cut from those boards and the window artwork; the boards themselves are in `images/boards/`.
 - Reviews: sites 01 and 03 use placeholder reviews. `01-street-bold-final` and site 02 have no reviews, just a "Leave a review on Google" button linking to the restaurant's Google Business Profile.
 - The "Halal" badge (site 1) is a placeholder, confirm before going live. `01-street-bold-final` and site 02 state "100% Halal" (hero badge, green band under the hero, menu note, footer) as confirmed by the owner.
 - Social links point to `#`.

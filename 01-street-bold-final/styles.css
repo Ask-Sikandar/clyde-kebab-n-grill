@@ -333,7 +333,7 @@ p { margin: 0 0 1em; }
 /* ---------- deals ---------- */
 .deals { background: var(--flame); color: var(--ink); padding: clamp(4rem, 9vw, 7rem) 0; position: relative; }
 .deals .h2 em { color: var(--cream); -webkit-text-stroke: 2px var(--ink); }
-.deals__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+.deals__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
 .deal {
   background: var(--cream); border: 4px solid var(--ink); border-radius: var(--radius);
   padding: 2rem 1.6rem 1.6rem; position: relative; box-shadow: var(--shadow);
