@@ -126,7 +126,7 @@ window.MENU = [
       { no: 37, name: "Roasted Potato", price: 1.8, desc: "", tags: [] },
       { no: 38, name: "Pineapple Fritters", price: 2.5, desc: "", tags: [] },
       { no: 39, name: "Chicken Strips", price: 2.5, desc: "", tags: [] },
-      { no: 40, name: "Dim Sim", price: 2.8, desc: "", tags: [] },
+      { no: 40, name: "Dimsim", price: 2.8, desc: "", tags: [] },
       { no: 41, name: "5 Nuggets & Chips", price: 12.5, desc: "", tags: [] },
       { no: 42, name: "3 Chicken Strips & Chips", price: 14, desc: "", tags: [] }
     ]
