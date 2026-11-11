@@ -1,7 +1,7 @@
 /* ------------------------------------------------------------------
    Clyde Kebab & Grill — menu data
    Copied exactly from the in-store menu boards (images/boards/,
-   November 2026 menu, items 1–49): only the items, prices and wording
+   November 2026 menu, items 1–52): only the items, prices and wording
    on the boards, nothing added. The page renders from this file.
    no    = item number on the menu board
    price = single price, or sizes = [["SML", 14], ["MED", 17], ...]
@@ -26,10 +26,10 @@ window.MENU = [
     name: "Deals",
     blurb: "",
     items: [
-      { name: "Deal 1", price: 17, desc: "1 Kebab, 1 Chips & 1 Drink", tags: [], img: "deal-1" },
-      { name: "Deal 2", price: 30, desc: "2 Kebabs, 1 Chips & 2 Drinks", tags: [], img: "deal-2" },
-      { name: "Deal 3", price: 42, desc: "3 Kebabs, 1 Chips & 3 Drinks", tags: [], img: "deal-3" },
-      { name: "Deal 4", price: 60, desc: "4 Kebabs, 1 Chips & 4 Drinks", tags: [], img: "deal-4" }
+      { name: "Deal 1", price: 17, desc: "1 Kebab, Small Chips & 1 Drink", tags: [], img: "deal-1" },
+      { name: "Deal 2", price: 30, desc: "2 Kebabs, Medium Chips & 2 Drinks", tags: [], img: "deal-2" },
+      { name: "Deal 3", price: 42, desc: "3 Kebabs, Large Chips & 3 Drinks", tags: [], img: "deal-3" },
+      { name: "Deal 4", price: 60, desc: "4 Kebabs, Large Chips & 4 Drinks", tags: [], img: "deal-4" }
     ]
   },
   {
@@ -60,13 +60,10 @@ window.MENU = [
     name: "Burgers & Plates",
     blurb: "",
     items: [
-      { no: 12, name: "Schnitzel Burger with Chips & Drink", price: 22, desc: "", tags: [], img: "schnitzel-burger-meal" },
+      { no: 12, name: "Schnitzel Burger", price: 22, desc: "With Med Chips & Drink", tags: [], img: "schnitzel-burger-meal" },
       { no: 13, name: "Schnitzel Burger", price: 14, desc: "", tags: [], img: "schnitzel-burger" },
       { no: 20, name: "Falafel Plate", price: 17, desc: "", tags: [], img: "falafel-plate" },
-      { no: 21, name: "Chicken Bread", price: 12, desc: "", tags: [], img: "chicken-bread" },
-      { no: 22, name: "Samosa", price: 3, desc: "", tags: [], img: "samosa" },
-      { no: 23, name: "Schnitzel Plate", price: 18, desc: "", tags: [], img: "schnitzel-plate" },
-      { no: 24, name: "Chicken Bread Meal", price: 18, desc: "", tags: [], img: "chicken-bread-meal" }
+      { no: 23, name: "Schnitzel Plate", price: 18, desc: "", tags: [], img: "schnitzel-plate" }
     ]
   },
   {
@@ -74,9 +71,9 @@ window.MENU = [
     name: "Shish Plates",
     blurb: "",
     items: [
-      { no: 14, name: "Shish Plate 1", price: 28, desc: "Shish plate with Salad 2 skewer with Drinks, Chips & Sauce", tags: [], img: "shish-1" },
-      { no: 15, name: "Shish Plate 2", price: 38, desc: "Shish plate with Salad 3 skewer with Drinks, Chips & Sauce", tags: [], img: "shish-2" },
-      { no: 16, name: "Shish Plate 3", price: 40, desc: "Shish plate with Rice 3 skewer with Drinks, Chips & Sauce", tags: [], img: "shish-3" },
+      { no: 14, name: "Shish Plate 1", price: 28, desc: "Shish plate with Salad 2 skewer with Small Chips, Drinks & Sauce", tags: [], img: "shish-1" },
+      { no: 15, name: "Shish Plate 2", price: 38, desc: "Shish plate with Salad 3 skewer with Med Chips, Drinks & Sauce", tags: [], img: "shish-2" },
+      { no: 16, name: "Shish Plate 3", price: 40, desc: "Shish plate with Rice 3 skewer with Drinks, Large Chips & Sauce", tags: [], img: "shish-3" },
       { no: 17, name: "Shish Plate 4", price: 30, desc: "Shish plate rice and 3 skewer with sauce", tags: [], img: "shish-4" }
     ]
   },
@@ -88,7 +85,13 @@ window.MENU = [
       { no: 18, name: "Omelette", price: 3, desc: "", tags: [], img: "omelette" },
       { no: 18, name: "Milk Tea", sizes: [["", 2], ["", 3], ["", 4]], desc: "", tags: [], img: "milk-tea" },
       { no: 18, name: "Paratha", price: 3, desc: "", tags: [], img: "paratha" },
-      { no: 19, name: "Breakfast Deal", price: 9, desc: "Paratha, omelette & tea", tags: [], img: "breakfast-deal" }
+      { no: 19, name: "Breakfast Deal", price: 9, desc: "Paratha, omelette & tea", tags: [], img: "breakfast-deal" },
+      { no: 21, name: "Chicken Bread", price: 12, desc: "", tags: [], img: "chicken-bread" },
+      { no: 22, name: "Samosa", price: 3, desc: "", tags: [], img: "samosa" },
+      { no: 24, name: "Chicken Bread Meal", price: 18, desc: "Med chips and Drink", tags: [], img: "chicken-bread-meal" },
+      { no: 32, name: "Gozleme Combo", price: 17, desc: "", tags: [], img: "gozleme-combo" },
+      { no: 33, name: "Gozleme", price: 12, desc: "", tags: [], img: "gozleme" },
+      { no: 33, name: "Bolani", price: 10, desc: "", tags: [], img: "gozleme" }
     ]
   },
   {
@@ -106,21 +109,11 @@ window.MENU = [
     ]
   },
   {
-    id: "gozleme",
-    name: "Gozleme & Drinks",
-    blurb: "",
-    items: [
-      { no: 32, name: "Gozleme Combo", price: 17, desc: "", tags: [], img: "gozleme-combo" },
-      { no: 33, name: "Gozleme", price: 12, desc: "", tags: [], img: "gozleme" },
-      { no: 33, name: "Bolani", price: 10, desc: "", tags: [], img: "gozleme" },
-      { no: 34, name: "Drinks", sizes: [["Can", 3.5], ["600 ml", 4.9], ["1.2 L", 6]], desc: "", tags: [] }
-    ]
-  },
-  {
     id: "hot",
-    name: "Hot Dishes",
+    name: "Hot Dishes & Drinks",
     blurb: "",
     items: [
+      { no: 34, name: "Drinks", sizes: [["Can", 3.5], ["600 ml", 4.9], ["1.2 L", 6]], desc: "", tags: [] },
       { no: 35, name: "Nuggets", price: 1.5, desc: "", tags: [] },
       { no: 36, name: "Potato Cakes", price: 1.5, desc: "", tags: [] },
       { no: 37, name: "Roasted Potato", price: 1.8, desc: "", tags: [] },
@@ -139,11 +132,13 @@ window.MENU = [
       { no: 43, name: "Whole Grill Chicken", price: 20, desc: "", tags: [], img: "chicken-whole" },
       { no: 44, name: "Half Grill Chicken", price: 12, desc: "", tags: [], img: "chicken-half" },
       { no: 45, name: "Quarter Grill Chicken", price: 8, desc: "", tags: [], img: "chicken-quarter" },
-      { no: 46, name: "Quarter Grill Chicken with Rice", price: 11, desc: "", tags: [], img: "chicken-quarter-rice" },
+      { no: 46, name: "Half Grill Chicken Pack", price: 23, desc: "", tags: [], img: "chicken-half-pack" },
       { no: 47, name: "Half Grill Chicken with Rice", price: 18, desc: "", tags: [], img: "chicken-half-rice" },
-      { no: 48, name: "Grill Chicken Family Deal 1", price: 52, desc: "Whole chicken with 2 can, 1 large chips, salad, rice & large gravy", tags: [], img: "family-deal-1" },
-      { no: 49, name: "Grill Chicken Family Deal 2", price: 30, desc: "Half chicken with 1 can, 1 Medium chips, salad, rice & medium gravy", tags: [], img: "family-deal-2" }
+      { no: 48, name: "Quarter Grill Chicken with Rice", price: 11, desc: "", tags: [], img: "chicken-quarter-rice" },
+      { no: 49, name: "Half Grill with Med Chips", price: 19, desc: "", tags: [], img: "chicken-half-chips" },
+      { no: 50, name: "Quarter Grill with Small Chips", price: 13, desc: "", tags: [], img: "chicken-quarter-chips" },
+      { no: 51, name: "Grill Chicken Family Deal 1", price: 52, desc: "Whole chicken with 2 can, 1 large chips, salad, rice & large gravy", tags: [], img: "family-deal-1" },
+      { no: 52, name: "Grill Chicken Family Deal 2", price: 30, desc: "Half chicken with 1 can, 1 Medium chips, salad, rice & medium gravy", tags: [], img: "family-deal-2" }
     ]
   }
-
 ];
