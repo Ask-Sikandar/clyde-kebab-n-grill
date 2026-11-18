@@ -14,14 +14,28 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=20261106b" />
+  <link rel="stylesheet" href="styles.css?v=20261118" />
+  <script>
+    /* Grand opening promo window (Melbourne time, AEDT = UTC+11). Everything marked data-promo hides itself
+       after `end`. Preview a phase with ?promo=soon, ?promo=live or ?promo=over */
+    window.PROMO = { start: "2026-11-22T11:00:00+11:00", end: "2026-11-23T00:00:00+11:00" };
+    (function (p) {
+      var f = (location.search.match(/[?&]promo=(soon|live|over)/) || [])[1];
+      p.now = function () {
+        return f === "soon" ? Date.parse(p.start) - 3e8 : f === "live" ? Date.parse(p.start) + 36e5 : f === "over" ? Date.parse(p.end) : Date.now();
+      };
+      if (p.now() >= Date.parse(p.end)) document.documentElement.classList.add("promo-over");
+    })(window.PROMO);
+  </script>
 </head>
 <body>
 
   <!-- ===== NAV ===== -->
   <header class="nav" id="nav">
-    <!-- TEMP: remove once the shop opens (see .soon-banner in styles.css) -->
-    <div class="soon-banner" role="status"><span class="soon-banner__dot" aria-hidden="true"></span><b>Opening soon</b><span class="soon-banner__deal">50% off on opening day!</span><span class="soon-banner__more">· We're not taking orders just yet, see you shortly in Clyde!</span></div>
+    <!-- Grand opening banner: hides itself after Sunday 22 Nov 2026 (see window.PROMO in <head> and .soon-banner in styles.css) -->
+    <button type="button" class="soon-banner" data-promo data-promo-open aria-label="Grand opening Sunday 22 November: 20% to 50% off, 11:00am till close while stocks last. Show details.">
+      <span class="promo-strip" aria-hidden="true"><span class="promo-strip__group"><b>🎉 Grand opening</b><span>Sunday 22 Nov</span><span class="promo-strip__deal">20% to 50% OFF</span><span>11:00am till close · while stocks last</span><span class="promo-strip__count" data-promo-short>Starts soon</span></span><span class="promo-strip__group"><b>🎉 Grand opening</b><span>Sunday 22 Nov</span><span class="promo-strip__deal">20% to 50% OFF</span><span>11:00am till close · while stocks last</span><span class="promo-strip__count" data-promo-short>Starts soon</span></span><span class="promo-strip__group"><b>🎉 Grand opening</b><span>Sunday 22 Nov</span><span class="promo-strip__deal">20% to 50% OFF</span><span>11:00am till close · while stocks last</span><span class="promo-strip__count" data-promo-short>Starts soon</span></span><span class="promo-strip__group"><b>🎉 Grand opening</b><span>Sunday 22 Nov</span><span class="promo-strip__deal">20% to 50% OFF</span><span>11:00am till close · while stocks last</span><span class="promo-strip__count" data-promo-short>Starts soon</span></span></span>
+    </button>
     <div class="nav__inner">
       <a href="#top" class="brand" aria-label="Clyde Kebab & Grill home">
         <img src="logo.png" alt="Clyde Kebab & Grill" class="brand__logo" style="height: 50px; width: auto;" />
@@ -66,8 +80,8 @@
             Kebabs, HSPs, shish plates, schnitzel burgers, gozleme, bolani, breakfast and grilled chicken in Clyde.
             Takeaway &amp; delivery only: call ahead for pick-up or get it delivered.
           </p>
-          <!-- TEMP: opening day offer, remove after opening day (see .opening-deal in styles.css) -->
-          <p class="opening-deal"><b>50% OFF</b><span>on opening day!</span></p>
+          <!-- Grand opening offer: hides itself after Sunday 22 Nov 2026 (see window.PROMO in <head>) -->
+          <button type="button" class="opening-deal" data-promo data-promo-open><b>20–50% OFF</b><span>Grand opening · Sun 22 Nov, 11am till close</span></button>
           <div class="hero__actions">
             <a href="#menu" class="btn btn--primary btn--lg">See the menu</a>
             <a href="tel:+61359170677" class="btn btn--outline btn--lg">Call to order</a>
@@ -267,7 +281,8 @@
         <div class="reviews__head">
           <div>
             <h2 class="h2">Tried us? <em>Leave a review.</em></h2>
-            <p class="reviews__note">We're opening soon in Clyde. Once you've tried us, a quick Google review helps other locals find us.</p>
+            <p class="reviews__note" data-promo>We're opening soon in Clyde. Once you've tried us, a quick Google review helps other locals find us.</p>
+            <p class="reviews__note" data-promo-after>We're new in Clyde. Once you've tried us, a quick Google review helps other locals find us.</p>
           </div>
           <a href="https://g.page/r/CdCi4b4Dxyt3ECA/review" class="btn btn--primary" target="_blank" rel="noopener">★ Leave a review on Google</a>
         </div>
@@ -334,6 +349,33 @@
     <img id="lightboxImg" alt="" />
   </dialog>
 
+  <!-- Grand opening pop-up + floating badge: both hide themselves after Sunday 22 Nov 2026 -->
+  <dialog class="promo-pop" id="promoPop" aria-labelledby="promoTitle" data-promo>
+    <div class="promo-pop__card">
+      <span class="promo-pop__rays" aria-hidden="true"></span>
+      <span class="promo-pop__confetti" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
+      <button type="button" class="promo-pop__close" aria-label="Close">×</button>
+      <p class="promo-pop__eyebrow">🎉 Grand opening</p>
+      <h2 class="promo-pop__title" id="promoTitle"><span class="promo-pop__pct">20% <small>to</small> 50%</span><span class="promo-pop__off">OFF</span></h2>
+      <p class="promo-pop__date">Sunday 22 November</p>
+      <p class="promo-pop__when">11:00am till close · while stocks last<br><b>One day only!</b></p>
+      <div class="promo-pop__clock" data-promo-clock aria-live="off"></div>
+      <div class="promo-pop__actions">
+        <a href="#menu" class="btn btn--primary" data-promo-close>See the menu</a>
+        <a href="tel:+61359170677" class="btn btn--dark">Call (03) 5917 0677</a>
+      </div>
+    </div>
+  </dialog>
+
+  <button type="button" class="promo-badge" data-promo data-promo-open aria-label="Grand opening offer: 20% to 50% off on Sunday 22 November. Show details.">
+    <svg viewBox="0 0 100 100" aria-hidden="true">
+      <defs><path id="promoCirc" d="M50,50 m-38,0 a38,38 0 1,1 76,0 a38,38 0 1,1 -76,0" /></defs>
+      <text><textPath href="#promoCirc">GRAND OPENING · SUNDAY 22 NOV · </textPath></text>
+    </svg>
+    <span class="promo-badge__center" aria-hidden="true"><small>Save</small>20–50%<small>off</small></span>
+    <span class="promo-badge__flag" aria-hidden="true" data-promo-flag>Sun 22 Nov</span>
+  </button>
+
   <a href="tel:+61359170677" class="fab" aria-label="Call to order">📞 Order pick-up</a>
 
   <!-- Protected Design Asset: Designed by Corvale -->
@@ -345,7 +387,7 @@
     window.__PROTECTED__ = true;
     console.log('%cDesigned by Corvale - Unauthorized copying prohibited', 'font-weight: bold; color: #FF5A1F;');
   </script>
-  <script src="menu-data.js?v=20261106b"></script>
-  <script src="script.js?v=20261106b"></script>
+  <script src="menu-data.js?v=20261118"></script>
+  <script src="script.js?v=20261118"></script>
 </body>
 </html>

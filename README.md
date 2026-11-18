@@ -11,7 +11,7 @@ Each folder is a complete static site: plain HTML / CSS / JS, no build step, no 
 
 All three are fully responsive and respect `prefers-reduced-motion`.
 
-**`01-street-bold-final/` is the version the client chose.** It's a copy of `01-street-bold/` with the real content from site 02: the real menu (items 1–49 plus meal deals, from the November 2026 menu) with dish photos, the in-store menu boards (tap to enlarge), real deals, the real phone number and address, the "100% Halal" messaging, a temporary "Opening soon" banner, and two-column layouts on phones. Like `02-fresh-modern/`, the folder holds only website files so it can be uploaded over SFTP as is. `01-street-bold/` stays as the original concept.
+**`01-street-bold-final/` is the version the client chose.** It's a copy of `01-street-bold/` with the real content from site 02: the real menu (items 1–49 plus meal deals, from the November 2026 menu) with dish photos, the in-store menu boards (tap to enlarge), real deals, the real phone number and address, the "100% Halal" messaging, a grand opening promo that switches itself off after Sunday 22 Nov 2026, and two-column layouts on phones. Like `02-fresh-modern/`, the folder holds only website files so it can be uploaded over SFTP as is. `01-street-bold/` stays as the original concept.
 
 ## Deploy to Netlify (drag & drop)
 
@@ -42,7 +42,8 @@ In 01 and 03, `.assetsignore` keeps `wrangler.jsonc` and Netlify state out of th
 
 - **Menu:** every site reads from `menu-data.js` in its folder. Change names, prices, descriptions and tags there; the page re-renders automatically. Tags: `v` vegetarian, `gf` gluten free, `hot` spicy, `fav` popular.
 - **Address, phone, hours:** search `index.html` for `Berwick-Cranbourne`, the phone number (`5917 0677` in `01-street-bold-final` and site 02, placeholder `5990 0000` elsewhere) and the hours table.
-- **"Opening soon" banner** (`01-street-bold-final` and site 02): delete the `soon-banner` div in `index.html`, the marked `.soon-banner` block in `styles.css`, and set `--banner: 0px`.
+- **"Opening soon" banner** (site 02): delete the `soon-banner` div in `index.html`, the marked `.soon-banner` block in `styles.css`, and set `--banner: 0px`.
+- **Grand opening promo** (`01-street-bold-final`): 20% to 50% off on Sunday 22 Nov 2026, 11:00am till close. It shows as a scrolling banner at the top, an offer pill in the hero, a floating badge and a pop-up (once per visit, reopened from the banner or badge). Everything marked `data-promo` hides itself at the `end` time in `window.PROMO` (in the `<head>` of `index.html`, Melbourne time), so nothing needs removing by hand. Preview the phases with `?promo=soon`, `?promo=live` or `?promo=over` on the URL.
 - **Photos:** sites 01 and 03 hot-link placeholder photos from Unsplash. Replace the `<img src="...">` URLs with the restaurant's own photos (drop them in an `images/` folder inside the site folder and reference them relatively). `01-street-bold-final` and site 02 already use the restaurant's own photos from their `images/` folders.
 
 ## Placeholder content to confirm with the client

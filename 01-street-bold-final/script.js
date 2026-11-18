@@ -136,6 +136,62 @@
   }));
   lightbox.addEventListener("click", e => { if (e.target !== lightboxImg) lightbox.close(); });
 
+  /* ---------- grand opening promo (window.PROMO is set in <head>) ---------- */
+  const P = window.PROMO;
+  const pop = $("#promoPop");
+  if (P && pop && !document.documentElement.classList.contains("promo-over")) {
+    const start = Date.parse(P.start), end = Date.parse(P.end);
+    const shorts = $$("[data-promo-short]"), clock = $("[data-promo-clock]"), flag = $("[data-promo-flag]");
+    const pad = n => String(n).padStart(2, "0");
+    let phase = "", timer = 0;
+
+    const tick = () => {
+      const now = P.now();
+      if (now >= end) { // promo is over: hide everything, stop ticking
+        document.documentElement.classList.add("promo-over");
+        if (pop.open) pop.close();
+        clearInterval(timer);
+        return;
+      }
+      if (now >= start) {
+        if (phase !== "live") {
+          phase = "live";
+          document.documentElement.classList.add("promo-live");
+          shorts.forEach(el => { el.textContent = "On now till close!"; });
+          clock.innerHTML = '<span class="promo-pop__live">On now! Till close</span>';
+          flag.textContent = "On now!";
+        }
+        return;
+      }
+      phase = "soon";
+      const t = Math.floor((start - now) / 1000);
+      const d = Math.floor(t / 86400), h = Math.floor(t / 3600) % 24, m = Math.floor(t / 60) % 60, sec = t % 60;
+      const short = "Starts in " + (d ? d + "d " : "") + pad(h) + "h " + pad(m) + "m" + (d ? "" : " " + pad(sec) + "s");
+      shorts.forEach(el => { el.textContent = short; });
+      clock.innerHTML = [[d, "days"], [h, "hrs"], [m, "mins"], [sec, "secs"]]
+        .map(([v, l]) => '<span>' + pad(v) + '<small>' + l + '</small></span>').join("");
+      clock.setAttribute("aria-label", short);
+    };
+    tick();
+    timer = setInterval(tick, 1000);
+
+    const openPop = () => { if (!pop.open && !document.documentElement.classList.contains("promo-over")) pop.showModal(); };
+    $$("[data-promo-open]").forEach(b => b.addEventListener("click", openPop));
+    $$(".promo-pop__close, [data-promo-close]", pop).forEach(b => b.addEventListener("click", () => pop.close()));
+    pop.addEventListener("click", e => { if (e.target === pop) pop.close(); }); // click on the backdrop
+
+    // the floating badge steps aside while the hero offer (same message) is on screen, so it never covers the hero buttons
+    const badge = $(".promo-badge"), heroDeal = $(".opening-deal");
+    if (badge && heroDeal && "IntersectionObserver" in window) {
+      new IntersectionObserver(([e]) => badge.classList.toggle("is-tucked", e.isIntersecting)).observe(heroDeal);
+    }
+
+    // pops up by itself once per browser session; the banner and badge stay on screen regardless
+    let seen = false;
+    try { seen = sessionStorage.getItem("promoSeen") === "1"; sessionStorage.setItem("promoSeen", "1"); } catch (e) { /* storage blocked */ }
+    if (!seen) setTimeout(openPop, 1200);
+  }
+
   /* ---------- misc ---------- */
   $("#year").textContent = new Date().getFullYear();
 })();
